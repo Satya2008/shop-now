@@ -1,5 +1,6 @@
 package com.shopnow.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.modelmapper.ModelMapper;
@@ -8,10 +9,11 @@ import org.springframework.stereotype.Service;
 
 import com.shopnow.dto.MyUserDto;
 import com.shopnow.entity.MyUser;
-import com.shopnow.entity.Seller;
-import com.shopnow.exceptions.SellerException;
+import com.shopnow.entity.Product;
 import com.shopnow.exceptions.SomethingWentWrong;
 import com.shopnow.repository.MyUserRepository;
+
+import jakarta.persistence.EntityNotFoundException;
 
 @Service
 public class MyUserServiceImpl implements MyUserService {
@@ -46,4 +48,16 @@ public class MyUserServiceImpl implements MyUserService {
 		}
 	}
 
-}
+	@Override
+	public List<Product> getAllProduct(Integer userId) throws SomethingWentWrong {
+		Optional<MyUser> myUser = myUserRepository.findById(userId);
+		if(!myUser.isPresent()) {
+		throw new EntityNotFoundException("User is not found");
+		}
+		MyUser user = myUser.get();
+		List<Product> products = user.getCart().getProducts();
+		return products;
+		}
+	}
+
+

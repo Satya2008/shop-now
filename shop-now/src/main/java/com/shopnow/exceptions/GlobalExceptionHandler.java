@@ -2,6 +2,7 @@ package com.shopnow.exceptions;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,22 +16,30 @@ import org.springframework.web.context.request.WebRequest;
 public class GlobalExceptionHandler {
 
 	@ExceptionHandler(SellerException.class)
-	public ResponseEntity<MyErrorDetails> handleUserException(SellerException ex, WebRequest wr){
+	public ResponseEntity<MyErrorDetails> handleUserException(SellerException ex, WebRequest wr) {
 		MyErrorDetails myErrorDetails = new MyErrorDetails();
 		myErrorDetails.setTimeStamp(LocalDate.now());
 		myErrorDetails.setMessage(ex.getMessage());
 		myErrorDetails.setDiscription(wr.getDescription(false));
 		return new ResponseEntity<MyErrorDetails>(myErrorDetails, HttpStatus.BAD_REQUEST);
 	}
-	
 
-	
+	@ExceptionHandler(SomethingWentWrong.class)
+	public ResponseEntity<MyErrorDetails> handleUserException(SomethingWentWrong ex, WebRequest wr) {
+		MyErrorDetails myErrorDetails = new MyErrorDetails();
+		myErrorDetails.setTimeStamp(LocalDate.now());
+		myErrorDetails.setMessage(ex.getMessage());
+		myErrorDetails.setDiscription(wr.getDescription(false));
+		return new ResponseEntity<MyErrorDetails>(myErrorDetails, HttpStatus.BAD_REQUEST);
+	}
+
 	@ExceptionHandler(MethodArgumentNotValidException.class)
-	public ResponseEntity<MyErrorDetails> handleValidationeException(MethodArgumentNotValidException ex, WebRequest wr){
+	public ResponseEntity<MyErrorDetails> handleValidationeException(MethodArgumentNotValidException ex,
+			WebRequest wr) {
 
 		MyErrorDetails myErrorDetails = new MyErrorDetails();
 		myErrorDetails.setTimeStamp(LocalDate.now());
-		
+
 		myErrorDetails.setMessage("Validation failed !!");
 
 		List<ObjectError> allErrors = ex.getBindingResult().getAllErrors();
@@ -40,15 +49,14 @@ public class GlobalExceptionHandler {
 		myErrorDetails.setDiscription(String.join(", ", errorMessages));
 		return new ResponseEntity<MyErrorDetails>(myErrorDetails, HttpStatus.BAD_REQUEST);
 	}
-	
-	
+
 	@ExceptionHandler(Exception.class)
-	public ResponseEntity<MyErrorDetails> Exception(Exception ex, WebRequest wr){
+	public ResponseEntity<MyErrorDetails> Exception(Exception ex, WebRequest wr) {
 		MyErrorDetails myErrorDetails = new MyErrorDetails();
 		myErrorDetails.setTimeStamp(LocalDate.now());
 		myErrorDetails.setMessage(ex.getMessage());
 		myErrorDetails.setDiscription(wr.getDescription(false));
 		return new ResponseEntity<MyErrorDetails>(myErrorDetails, HttpStatus.BAD_REQUEST);
 	}
-	
+
 }

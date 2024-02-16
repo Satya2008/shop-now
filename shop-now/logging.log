@@ -1,1 +1,35 @@
-2024-02-15T10:15:05.233+05:30  WARN 12604 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9h26m29s67ms80µs).
+2024-02-16T11:21:15.848+05:30  WARN 13280 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9h22m43s200ms615µs801ns).
+2024-02-16T11:22:15.089+05:30  WARN 13280 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m1s195ms55µs600ns).
+2024-02-16T11:28:45.550+05:30  INFO 13280 --- [RMI TCP Connection(316)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-02-16T11:28:49.594+05:30  INFO 13280 --- [RMI TCP Connection(316)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-16T11:28:50.032+05:30  INFO 13280 --- [RMI TCP Connection(316)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-16T11:28:50.367+05:30  INFO 13280 --- [RMI TCP Connection(316)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-02-16T11:29:07.798+05:30  INFO 11040 --- [main] com.shopnow.ShopNowApplication           : Starting ShopNowApplication using Java 17.0.6 with PID 11040 (C:\Users\Lenovo\Desktop\shop-now\shop-now\target\classes started by Lenovo in C:\Users\Lenovo\Desktop\shop-now\shop-now)
+2024-02-16T11:29:07.803+05:30  INFO 11040 --- [main] com.shopnow.ShopNowApplication           : No active profile set, falling back to 1 default profile: "default"
+2024-02-16T11:29:10.068+05:30  INFO 11040 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-16T11:29:10.226+05:30  INFO 11040 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 132 ms. Found 4 JPA repository interfaces.
+2024-02-16T11:29:11.545+05:30  INFO 11040 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-02-16T11:29:11.585+05:30  INFO 11040 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-02-16T11:29:11.585+05:30  INFO 11040 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-02-16T11:29:11.760+05:30  INFO 11040 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-02-16T11:29:11.761+05:30  INFO 11040 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3834 ms
+2024-02-16T11:29:12.106+05:30  INFO 11040 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-02-16T11:29:12.291+05:30  INFO 11040 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-02-16T11:29:12.399+05:30  INFO 11040 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-02-16T11:29:13.123+05:30  INFO 11040 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-02-16T11:29:13.191+05:30  INFO 11040 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-02-16T11:29:14.024+05:30  INFO 11040 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3f45dfec
+2024-02-16T11:29:14.033+05:30  INFO 11040 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-02-16T11:29:16.702+05:30  INFO 11040 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-02-16T11:29:17.127+05:30  INFO 11040 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-02-16T11:29:18.176+05:30  INFO 11040 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-02-16T11:29:19.864+05:30  WARN 11040 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-02-16T11:29:21.160+05:30  INFO 11040 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-02-16T11:29:21.177+05:30  INFO 11040 --- [main] com.shopnow.ShopNowApplication           : Started ShopNowApplication in 14.932 seconds (process running for 17.264)
+2024-02-16T11:30:01.023+05:30  INFO 11040 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-16T11:30:01.024+05:30  INFO 11040 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-02-16T11:30:01.026+05:30  INFO 11040 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2024-02-16T15:42:49.989+05:30  INFO 11040 --- [RMI TCP Connection(293)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-02-16T15:42:53.104+05:30  INFO 11040 --- [RMI TCP Connection(293)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-02-16T15:42:53.473+05:30  INFO 11040 --- [RMI TCP Connection(293)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-02-16T15:42:53.880+05:30  INFO 11040 --- [RMI TCP Connection(293)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

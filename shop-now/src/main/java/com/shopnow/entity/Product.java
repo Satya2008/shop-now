@@ -18,21 +18,20 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Product {
     
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer productId;
-    
-    private String name;
-    private Integer price;
-    private String description;
-    private String color;
-    
-    @Column(columnDefinition = "TEXT")
-    private String image;
-    private String category;
-    
-    @JsonIgnore
-    @ManyToOne
-    private Seller seller;
-    
+	  @Id
+	    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	    private Integer productId;
+
+	    private String name;
+	    private Integer price;
+	    private String description;
+	    private String color;
+
+	    @Column(columnDefinition = "TEXT")
+	    private String image;
+	    private String category;
+
+	    @JsonIgnore
+	    @ManyToOne
+	    private Seller seller;
 }

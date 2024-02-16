@@ -16,27 +16,25 @@ import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Seller {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer sellerId;
+	 @Id
+	    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	    private Integer sellerId;
 
-	private String name;
+	    private String name;
 
-	@Column(unique = true)
-	private String email;
+	    @Column(unique = true)
+	    private String email;
 
-	 @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-	private String password;
+	    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+	    private String password;
 
-	@JsonIgnore
-	@OneToMany(mappedBy = "seller", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	private List<Product> products;
-
+	    @JsonIgnore
+	    @OneToMany(mappedBy = "seller", cascade = CascadeType.ALL)
+	    private List<Product> products;
 }
